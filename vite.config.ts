@@ -2,18 +2,14 @@ import type { UserConfig } from "vite";
 import copy from "rollup-plugin-copy";
 import vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
-import AutoImport from "unplugin-auto-import/vite";
 
 const path = require("path");
 
 const config: UserConfig = {
   plugins: [
     vue(),
-    AutoImport({
-      imports: ["vue", "vue-router"],
-      dts: "src/auto-imports.d.ts",
-    }),
     Components({ dts: "src/components.d.ts" }),
+    // @ts-ignore
     copy({
       targets: [
         {
