@@ -22,7 +22,7 @@
     @apply flex fui-container py-2;
   }
   .fyui-nav__main {
-    @apply w-full flex flex-wrap	 gap-4 items-center justify-between;
+    @apply w-full flex flex-wrap gap-4 items-center justify-between;
   }
   .fyui-nav__ul {
     @apply order-1 flex-1 hidden md:inline-flex md:items-center md:justify-end gap-2 lg:gap-5;
@@ -33,6 +33,13 @@
       button,
       a {
         @apply inline-flex items-center gap-1 py-1 md:py-0 text-base md:text-sm lg:text-base;
+      }
+      .fyui-nav__sub {
+        @apply md:absolute z-10 bg-fv-neutral-50 dark:bg-fv-neutral-900 md:pb-2 md:translate-y-3 pb-[1px] w-48 px-0.5 rounded-b-lg md:left-1/2 md:-translate-x-1/2 overflow-hidden;
+        .fyui-nav__is-link {
+          @apply hover:bg-transparent focus:bg-transparent;
+          @apply block py-0.5 md:hover:bg-fv-neutral-200 md:dark:hover:bg-fv-neutral-800 md:focus:bg-fv-neutral-200 md:dark:focus:bg-fv-neutral-800 block px-3 md:text-center;
+        }
       }
     }
     &.fyui-nav__nav-open {
@@ -82,11 +89,8 @@
   }
   .fyui-nav__is-link {
     @apply dark:hover:text-fv-primary-400 hover:text-fv-primary-700 dark:focus:text-fv-primary-400 focus:text-fv-primary-700 block;
-  }
-  .fyui-nav__sub {
-    @apply md:absolute z-10 bg-fv-neutral-50 dark:bg-fv-neutral-900 md:pb-2 md:translate-y-3 pb-[1px] w-48 px-0.5 rounded-b-lg md:left-1/2 md:-translate-x-1/2 overflow-hidden;
-    .fyui-nav__is-link {
-      @apply hover:bg-fv-neutral-200 dark:hover:bg-fv-neutral-800 focus:bg-fv-neutral-200 dark:focus:bg-fv-neutral-800 block px-3 md:text-center;
+    &.router-link-exact-active {
+      @apply text-fv-primary-600 dark:text-fv-primary-400;
     }
   }
 }

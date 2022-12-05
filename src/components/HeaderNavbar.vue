@@ -55,6 +55,8 @@ withDefaults(
             type="button"
             class="fyui-nav_toggle-open | fyui-nav__rounded-action btn neutral"
             @click="toggleNavbarOpen()"
+            aria-controls="navbar"
+            :aria-expanded="open"
           >
             <span class="fui-sr-only">Open main menu</span>
             <svg
@@ -75,6 +77,7 @@ withDefaults(
           role="list"
           class="fyui-nav__ul"
           :class="isOpen ? 'fyui-nav__nav-open' : ''"
+          aria-label="Main navigation"
         >
           <li
             v-for="(link, index) in links"
