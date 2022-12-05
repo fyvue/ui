@@ -1,15 +1,15 @@
 import type { App, Plugin } from "vue";
 import "./styles/style.scss";
-import FyTest from "./components/FyTest.vue";
+import HeaderNavbar from "./components/HeaderNavbar.vue";
 
 function createFyUI() {
   return {
     install(app: App) {
       if (app) {
-        app.component("FyTest", FyTest);
+        app.component("HeaderNavbar", HeaderNavbar);
       }
     },
   } as Plugin;
 }
 
-export { createFyUI, FyTest };
+export { createFyUI, HeaderNavbar };

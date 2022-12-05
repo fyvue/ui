@@ -1,0 +1,65 @@
+// Defaults
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  text-rendering: optimizeSpeed;
+}
+
+// Utils
+.btn {
+  @apply inline-flex px-3 py-1.5 rounded-xl;
+  transition: background-color 400ms ease, box-shadow 400ms ease;
+  &.primary {
+    @apply bg-fv-primary-600 text-fv-neutral-50 dark:bg-fv-primary-300 dark:text-fv-neutral-900;
+    @apply hover:bg-fv-primary-800 dark:hover:bg-fv-primary-100;
+    @apply focus:bg-fv-primary-800 dark:focus:bg-fv-primary-100;
+  }
+  &.neutral {
+    @apply bg-fv-neutral-200 text-fv-neutral-600 dark:bg-fv-neutral-700 dark:text-fv-neutral-300;
+    @apply hover:bg-fv-neutral-300 dark:hover:bg-fv-neutral-800;
+    @apply focus:bg-fv-neutral-300 dark:focus:bg-fv-neutral-800;
+  }
+  &.round, &.fround {
+    @apply rounded-full;
+  }
+}
+
+.fui-container {
+  @apply container mx-auto max-w-screen-xl px-2;
+}
+.fui-sr-only {
+  @apply sr-only;
+}
+
+
+// Typo
+.h1, .fvtypo h1 {
+  @apply text-[2rem] font-bold dark:text-white border-b-2 border-b-fv-primary-200 dark:border-b-fv-primary-500 mb-3;
+}
+.h2, .fvtypo h2 {
+  @apply text-[1.6rem] font-bold dark:text-white;
+}
+.h3, .fvtypo h3 {
+  @apply text-[1.4rem] font-bold dark:text-white;
+}
+.h4, .fvtypo h4 {
+  @apply text-[1.2rem] font-bold dark:text-white;
+}
+.h5, .fvtypo h5 {
+  @apply text-[1.1rem] font-bold dark:text-white;
+}
+.h6, .fvtypo h6 {
+  @apply text-[1rem] font-bold dark:text-white;
+}
