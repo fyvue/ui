@@ -13,5 +13,22 @@ export interface ConfirmModalData {
   desc: string;
   onConfirm: Function;
 }
+export interface Paging {
+  page_no: number;
+  results_per_page: number;
+  page_max: number;
+  page_max_relation: string;
+  count: number;
+}
+export interface Step {
+  name: string;
+  icon?: string;
+}
+export interface TableHeaders {
+  [key: string]: string;
+}
+export interface TableData {
+  [key: string]: any;
+}
 export type modelValueType = string | number | string[] | undefined;
 export type checkboxValueType = any[] | Set<any> | undefined | boolean;

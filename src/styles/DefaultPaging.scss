@@ -1,0 +1,63 @@
+.fui-paging {
+  @apply flex items-center justify-center;
+  svg {
+    @apply w-4 h-4;
+  }
+  nav {
+    @apply relative z-0 inline-flex rounded-md shadow-sm -space-x-px;
+  }
+  .fui-paging__prev-next {
+    @apply relative inline-flex items-center px-2 pt-2 pb-1.5  border text-sm font-medium;
+  }
+  .fui-paging__active {
+    @apply z-10 relative inline-flex items-center px-4 pt-2 pb-1.5 border text-sm font-medium font-bold;
+  }
+  .fui-paging__innactive {
+    @apply relative inline-flex items-center px-4 pt-2 pb-1.5 border text-sm font-medium;
+  }
+  .fui-paging__dots {
+    @apply relative inline-flex items-center px-2 pt-2 pb-1.5 border  text-sm font-medium;
+  }
+  .fui-paging__paging-text {
+    @apply text-xs text-center italic mt-0.5;
+  }
+}
+.light {
+  .fui-paging {
+    .fui-paging__prev-next {
+      @apply border-fv-neutral-300 bg-fv-neutral-100 text-fv-neutral-500 hover:bg-fv-neutral-200 hover:text-fv-neutral-600;
+    }
+    .fui-paging__active {
+      @apply bg-fv-primary-50 border-fv-primary-500 text-fv-primary-600 hover:text-fv-neutral-600;
+    }
+    .fui-paging__innactive {
+      @apply bg-fv-neutral-100 border-fv-neutral-300 text-fv-neutral-500 hover:bg-fv-neutral-200 hover:text-fv-neutral-600;
+    }
+    .fui-paging__dots {
+      @apply border-fv-neutral-300 bg-fv-neutral-100 text-fv-neutral-700 hover:text-fv-neutral-600;
+    }
+    .fui-paging__paging-text {
+      @apply text-fv-neutral-700;
+    }
+  }
+}
+
+.dark {
+  .fui-paging {
+    .fui-paging__prev-next {
+      @apply border-fv-neutral-600 bg-fv-neutral-800 text-fv-neutral-200 hover:bg-fv-neutral-800 hover:text-fv-neutral-100;
+    }
+    .fui-paging__active {
+      @apply bg-fv-primary-900 border-fv-primary-500 text-fv-primary-200 hover:text-fv-neutral-100;
+    }
+    .fui-paging__innactive {
+      @apply bg-fv-neutral-800 border-fv-neutral-600 text-fv-neutral-200 hover:bg-fv-neutral-800 hover:text-fv-neutral-100;
+    }
+    .fui-paging__dots {
+      @apply border-fv-neutral-600 bg-fv-neutral-800 text-fv-neutral-700 hover:text-fv-neutral-100;
+    }
+    .fui-paging__paging-text {
+      @apply text-fv-neutral-300;
+    }
+  }
+}

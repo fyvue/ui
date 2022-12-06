@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import {
   Dialog,
-  DialogOverlay,
+  TransitionRoot,
   DialogTitle,
   DialogPanel,
 } from "@headlessui/vue";

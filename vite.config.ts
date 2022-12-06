@@ -54,6 +54,7 @@ const config: UserConfig = {
         "@fy-/core",
         "@vuelidate/core",
         "@vuelidate/validators",
+        "vue-router",
       ],
       output: {
         exports: "named",
@@ -62,11 +63,12 @@ const config: UserConfig = {
         globals: {
           vue: "Vue",
           "@vue/compiler-dom": "VueCompilerDOM",
-          "@vueuse/core": "vueuseC",
-          "@fy-/head": "fyhead",
-          "@fy-/core": "fycore",
+          "@vueuse/core": "vueuseCore",
+          "@fy-/head": "fyHead",
+          "@fy-/core": "fyCore",
           "@vuelidate/core": "vuelidateCore",
           "@vuelidate/validators": "vuelidateValidators",
+          "vue-router": "vueRouter",
         },
       },
     },
