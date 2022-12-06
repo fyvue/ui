@@ -59,13 +59,15 @@ const checkPageNumber = (page: number = 1) => {
   prevNextSeo.value.next = undefined;
   prevNextSeo.value.prev = undefined;
   /* @ts-ignore */
-  if (FW !== "undefined") {
-    if (page + 1 <= props.items.page_max) {
+  if (typeof FW !== "undefined") {
+    /* @ts-ignore */
+    if (page + 1 <= props.items.page_max && FW.URL) {
       /* @ts-ignore */
       // eslint-disable-next-line
       prevNextSeo.value.next = `${FW.URL.scheme}://${FW.URL.host}${FW.URL.path}?page=${page + 1}`;
     }
-    if (page - 1 >= 1) {
+    /* @ts-ignore */
+    if (page - 1 >= 1 && FW.URL) {
       /* @ts-ignore */
       // eslint-disable-next-line
       prevNextSeo.value.prev = `${FW.URL.scheme}://${FW.URL.host}${FW.URL.path}?page=${page - 1}`;
@@ -154,7 +156,10 @@ useFyHead({
             {{ items.page_no + i }}
           </a>
         </template>
-        <span v-if="items.page_no + 2 < items.page_max - 1" class="dots">
+        <span
+          v-if="items.page_no + 2 < items.page_max - 1"
+          class="fui-paging__dots"
+        >
           ...
         </span>
         <a
