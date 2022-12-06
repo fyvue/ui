@@ -3,7 +3,6 @@
     "version": "0.0.1",
     "author": "Florian 'Fy' Gasquez <m@fy.to>",
     "license": "MIT",
-    "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/fyvue/ui.git"
@@ -15,11 +14,13 @@
     "main": "dist/fyui.cjs.js",
     "module": "dist/fyui.es.js",
     "typings": "dist/index.d.ts",
+    "types": "dist/index.d.ts",
+    "type": "module",
     "exports": {
         ".": {
             "import": "./dist/fyui.es.js",
             "require": "./dist/fyui.cjs.js",
-            "types": "./dist/types/index.d.ts"
+            "types": "./dist/index.d.ts"
         },
         "./style.css": {
             "import": "./dist/style.css",
