@@ -1,6 +1,6 @@
 {
     "name": "@fy-/ui",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "author": "Florian 'Fy' Gasquez <m@fy.to>",
     "license": "MIT",
     "repository": {
@@ -15,7 +15,6 @@
     "module": "dist/fyui.es.js",
     "typings": "dist/index.d.ts",
     "types": "dist/index.d.ts",
-    "type": "module",
     "exports": {
         ".": {
             "import": "./dist/fyui.es.js",
