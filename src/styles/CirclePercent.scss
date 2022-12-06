@@ -1,0 +1,49 @@
+.fui-circlePercent {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .fui-circlePercent__chart {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .fui-circlePercent__bg {
+    fill: none;
+    stroke-width: 3.8;
+  }
+
+  .fui-circlePercent__circle {
+    fill: none;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    animation: progress 3s ease-out forwards;
+  }
+
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+
+  .fui-circlePercent__percent {
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
+}
+
+.light {
+  .fui-circlePercent__bg {
+    stroke: #ccc;
+  }
+  .fui-circlePercent__percent {
+    fill: #000;
+  }
+}
+.dark {
+  .fui-circlePercent__bg {
+    stroke: #404040;
+  }
+  .fui-circlePercent__percent {
+    fill: #ebedf1;
+  }
+}

@@ -1,5 +1,6 @@
 dist/
 src/styles/__*
+src/components.d.ts
 # yarn
 .rollup.*
 .pnp.*

@@ -2,13 +2,14 @@ import type { UserConfig } from "vite";
 import copy from "rollup-plugin-copy";
 import vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
-
-const path = require("path");
+import path from "path";
 
 const config: UserConfig = {
   plugins: [
     vue(),
-    Components({ dts: "src/components.d.ts" }),
+    Components({
+      dts: "src/components.d.ts",
+    }),
     // @ts-ignore
     copy({
       targets: [
@@ -45,7 +46,15 @@ const config: UserConfig = {
       fileName: (format) => `fyui.${format}.js`,
     },
     rollupOptions: {
-      external: ["vue", "@vue/compiler-dom", "@vueuse/core"],
+      external: [
+        "vue",
+        "@vue/compiler-dom",
+        "@vueuse/core",
+        "@fy-/head",
+        "@fy-/core",
+        "@vuelidate/core",
+        "@vuelidate/validators",
+      ],
       output: {
         exports: "named",
         sourcemap: true,
@@ -54,6 +63,10 @@ const config: UserConfig = {
           vue: "Vue",
           "@vue/compiler-dom": "VueCompilerDOM",
           "@vueuse/core": "vueuseC",
+          "@fy-/head": "fyhead",
+          "@fy-/core": "fycore",
+          "@vuelidate/core": "vuelidateCore",
+          "@vuelidate/validators": "vuelidateValidators",
         },
       },
     },

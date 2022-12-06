@@ -1,0 +1,74 @@
+
+.fui-modal {
+  @apply fixed inset-0 overflow-y-auto;
+  z-index: 40;
+
+  .fui-modal__container {
+    @apply flex flex-col items-center justify-center min-h-screen;
+  }
+  .fui-modal__parent {
+    @apply relative mx-1 md:mx-0 w-11/12  max-w-6xl shadow;
+    z-index: 41;
+  }
+  .fui-modal__title {
+    @apply text-xl flex justify-between items-center px-2 py-1;
+  }
+  .fui-modal__close-icon {
+    @apply w-8;
+    &.fui-modal__is-alone {
+      @apply float-right mr-1 mt-1;
+    }
+  }
+  .fui-modal__content {
+    @apply p-2 md:p-3 xl:p-4 2xl:p-5;
+  }
+}
+.fui-modal-confirm {
+  .fui-modal__parent {
+    @apply max-w-sm;
+  }
+  .btn-box {
+    @apply mt-4;
+  }
+}
+.light {
+  .fui-modal {
+    .fui-modal__container {
+      @apply text-fv-neutral-800;
+      background: rgba(0, 0, 0, 0.2) !important;
+    }
+    .fui-modal__inner {
+      @apply bg-fv-neutral-100;
+    }
+    .fui-modal__title {
+      @apply bg-fv-neutral-50;
+    }
+    .fui-modal__close-icon {
+      @apply text-fv-neutral-700;
+      &:hover {
+        @apply text-fv-neutral-800;
+      }
+    }
+  }
+}
+
+.dark {
+  .fui-modal {
+    .fui-modal__container {
+      @apply text-fv-neutral-300;
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
+    .fui-modal__inner {
+      @apply bg-fv-neutral-800;
+    }
+    .fui-modal__title {
+      @apply bg-fv-neutral-900;
+    }
+    .fui-modal__close-icon {
+      @apply text-fv-neutral-400;
+      &:hover {
+        @apply text-fv-neutral-200;
+      }
+    }
+  }
+}

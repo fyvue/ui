@@ -33,9 +33,11 @@ withDefaults(
 <template>
   <header class="fyui-nav">
     <div class="fyui-nav__wrapper">
-      <a :href="skipNavAnchor" class="fyui-nav__skip-nav">Skip nav</a>
+      <a :href="skipNavAnchor" class="fyui-nav__skip-nav" tabindex="1"
+        >Skip nav</a
+      >
       <nav class="fyui-nav__main">
-        <RouterLink to="/" class="fyui-nav__logo" :title="title">
+        <RouterLink to="/" class="fyui-nav__logo" :title="title" tabindex="1">
           <slot name="logo">
             <span v-if="title && showTitle">{{ title }}</span>
           </slot>
@@ -45,6 +47,7 @@ withDefaults(
           <button
             @click="toggleDark()"
             class="fyui-nav__rounded-action | btn neutral"
+            tabindex="4"
             v-if="darkLight"
           >
             <span class="fui-sr-only">Toggle dark/light</span>
@@ -55,8 +58,9 @@ withDefaults(
             type="button"
             class="fyui-nav_toggle-open | fyui-nav__rounded-action btn neutral"
             @click="toggleNavbarOpen()"
-            aria-controls="navbar"
-            :aria-expanded="open"
+            aria-controls="main-nav"
+            tabindex="4"
+            :aria-expanded="isOpen"
           >
             <span class="fui-sr-only">Open main menu</span>
             <svg
@@ -78,6 +82,7 @@ withDefaults(
           class="fyui-nav__ul"
           :class="isOpen ? 'fyui-nav__nav-open' : ''"
           aria-label="Main navigation"
+          id="main-nav"
         >
           <li
             v-for="(link, index) in links"
@@ -90,7 +95,7 @@ withDefaults(
           >
             <template v-if="link.childrens && link.childrens.length > 0">
               <Menu>
-                <MenuButton class="fyui-nav__is-link">
+                <MenuButton class="fyui-nav__is-link" tabindex="1">
                   {{ link.name }}
                   <svg
                     aria-hidden="true"
@@ -146,6 +151,7 @@ withDefaults(
                 :alt="link.name"
                 class="fyui-nav__is-link"
                 :class="false ? 'is-active' : ''"
+                tabindex="1"
               >
                 {{ link.name }}
               </router-link>
@@ -156,6 +162,7 @@ withDefaults(
                 :alt="link.name"
                 class="fyui-nav__is-link"
                 :class="false ? 'is-active' : ''"
+                tabindex="1"
               >
                 {{ link.name }}
               </a>
