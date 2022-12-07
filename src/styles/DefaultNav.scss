@@ -20,7 +20,7 @@
     transition: translate 250ms ease-in, opacity 250ms ease-in;
   }
   .fyui-nav__skip-nav:focus {
-    @apply bg-fv-neutral-50 rounded-full px-3 shadow py-0.5;
+    @apply bg-fv-neutral-50 rounded-full px-3 shadow py-0.5 dark:text-fv-neutral-700;
     transform: translateY(0.45em);
 
     opacity: 1;
