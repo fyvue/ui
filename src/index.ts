@@ -11,6 +11,7 @@ import DefaultPaging from "./components/DefaultPaging.vue";
 import DefaultSteps from "./components/DefaultSteps.vue";
 import DefaultTable from "./components/DefaultTable.vue";
 import DefaultError404 from "./components/DefaultError404.vue";
+import NavSide from "./components/NavSide.vue";
 
 function createFyUI() {
   return {
@@ -27,6 +28,7 @@ function createFyUI() {
         app.component("DefaultSteps", DefaultSteps);
         app.component("DefaultTable", DefaultTable);
         app.component("DefaultError404", DefaultError404);
+        app.component("NavSide", NavSide);
       }
     },
   } as Plugin;
@@ -44,6 +46,7 @@ const componentsList = [
   "DefaultSteps",
   "DefaultTable",
   "DefaultError404",
+  "NavSide",
 ];
 
 const fyuiResolver = (componentName: string) => {
@@ -65,6 +68,7 @@ export {
   DefaultSteps,
   DefaultTable,
   DefaultError404,
+  NavSide,
 };
 
 export * from "./types";
@@ -83,5 +87,6 @@ declare module "vue" {
     InnerLoader: typeof import("./components/inc/InnerLoader.vue")["default"];
     NavBreadcrumb: typeof import("./components/NavBreadcrumb.vue")["default"];
     NavMain: typeof import("./components/NavMain.vue")["default"];
+    NavSide: typeof import("./components/NavSide.vue")["default"];
   }
 }

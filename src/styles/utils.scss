@@ -31,6 +31,11 @@ body {
 }
 
 // Utils
+.fui-tooltip {
+  @apply inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium;
+  @apply text-fv-neutral-50 bg-fv-neutral-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300  dark:bg-fv-neutral-700;
+}
+
 .btn {
   @apply inline-flex px-[.85em] py-[.35em] rounded-lg font-semibold items-center;
   transition: background-color 400ms ease, box-shadow 400ms ease, color 400ms ease;

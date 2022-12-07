@@ -1,8 +1,11 @@
+import type { Component } from "vue";
+
 export type NavLink = {
   to: string;
   isExternal?: boolean;
   name: string;
   childrens?: NavLink[];
+  icon?: Component;
 };
 export interface BreadcrumbLink {
   name: string;
