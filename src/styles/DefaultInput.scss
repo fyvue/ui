@@ -11,7 +11,7 @@
     }
   }
   .fui-input__input {
-    @apply bg-transparent p-2  border-0 focus:ring-fv-primary-500 focus:border-fv-primary-500 w-full dark:focus:ring-fv-primary-500 dark:focus:border-fv-primary-500 dark:placeholder-fv-neutral-300 dark:text-white;
+    @apply  bg-transparent p-2  border-0 focus:ring-fv-primary-500 focus:border-fv-primary-500 w-full dark:focus:ring-fv-primary-500 dark:focus:border-fv-primary-500 dark:placeholder-fv-neutral-300 dark:text-white;
   }
   .fui-input__box {
     @apply rounded flex bg-fv-neutral-50 border border-fv-neutral-300 text-fv-neutral-900 text-sm  block w-full   dark:bg-fv-neutral-700 dark:border-fv-neutral-600;
@@ -35,7 +35,7 @@
     }
   }
   .fui-input__label {
-    @apply block mt-2 mb-1 text-sm font-bold text-fv-neutral-600 dark:text-fv-neutral-300 uppercase;
+    @apply block pt-2 mb-1 text-sm font-bold text-fv-neutral-600 dark:text-fv-neutral-300 uppercase;
   }
   .fui-input__link {
     svg {
