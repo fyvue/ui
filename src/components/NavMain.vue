@@ -38,9 +38,8 @@ withDefaults(
       >
       <nav class="fyui-nav__main">
         <RouterLink to="/" class="fyui-nav__logo" :title="title" tabindex="1">
-          <slot name="logo">
-            <span v-if="title && showTitle">{{ title }}</span>
-          </slot>
+          <slot name="logo"></slot>
+          <span v-if="title && showTitle">{{ title }}</span>
         </RouterLink>
         <div class="fyui-nav__actions">
           <slot name="actions"> </slot>

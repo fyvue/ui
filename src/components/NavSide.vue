@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import { NavLink } from "../types";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/vue/24/solid";
-import { RouterLink } from "vue-router";
 import { useStorage } from "@vueuse/core";
-
+import { useRoute } from "vue-router";
 const props = withDefaults(
   defineProps<{
     links: NavLink[];
@@ -13,6 +12,18 @@ const props = withDefaults(
     id: "main",
   }
 );
+const route = useRoute();
+const isLinkActive = (link: NavLink) => {
+  if (link.to != "/") {
+    if (route.path == link.to || route.path.includes(link.to))
+      return "router-link-active";
+  } else {
+    if (route.path == link.to) {
+      return "router-link-exact-active";
+    }
+  }
+  return "";
+};
 const isOpen = useStorage(`isOpenSidebar-${props.id}`, true);
 </script>
 <template>
@@ -25,7 +36,11 @@ const isOpen = useStorage(`isOpenSidebar-${props.id}`, true);
     </div>
     <ul role="list">
       <li v-for="(link, index) of links" :key="`aside_link_${index}`">
-        <RouterLink :to="link.to" class="fui-sidebar__link">
+        <RouterLink
+          :to="link.to"
+          class="fui-sidebar__link"
+          :class="isLinkActive(link)"
+        >
           <component :is="link.icon" v-if="link.icon" />
           <span>{{ link.name }}</span>
           <div role="tooltip" class="fui-tooltip">

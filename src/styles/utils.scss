@@ -97,7 +97,7 @@ form .btn-box {
 
 // Typo
 .h1, .fui-typo h1, .fv-typo h1 {
-  @apply font-bold dark:text-white border-b-2 border-b-fv-primary-200 dark:border-b-fv-primary-500 mb-3;
+  @apply font-bold dark:text-white;
   font-size: var(--size-sm-500);
 }
 .h2, .fui-typo h2, .fv-typo h2 {
