@@ -1,7 +1,7 @@
 .fui-input {
   @apply w-full;
   input[type="checkbox"] {
-    @apply -mt-1;
+    @apply -mt-1 mr-2;
     &:focus,
     &:active {
       @apply outline-0 outline-1 outline-fv-primary-500;
@@ -11,7 +11,7 @@
     }
   }
   .fui-input__input {
-    @apply  bg-transparent p-2  border-0 focus:ring-fv-primary-500 focus:border-fv-primary-500 w-full dark:focus:ring-fv-primary-500 dark:focus:border-fv-primary-500 dark:placeholder-fv-neutral-300 dark:text-white;
+    @apply bg-transparent p-2  border-0 focus:ring-fv-primary-500 focus:border-fv-primary-500 w-full dark:focus:ring-fv-primary-500 dark:focus:border-fv-primary-500 dark:placeholder-fv-neutral-300 dark:text-white;
   }
   .fui-input__box {
     @apply rounded flex bg-fv-neutral-50 border border-fv-neutral-300 text-fv-neutral-900 text-sm  block w-full   dark:bg-fv-neutral-700 dark:border-fv-neutral-600;
@@ -31,7 +31,7 @@
     select {
       @apply bg-fv-neutral-50 dark:bg-fv-neutral-700;
       outline: 0;
-      border:0;
+      border: 0;
     }
   }
   .fui-input__label {
