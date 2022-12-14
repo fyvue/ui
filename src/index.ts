@@ -26,6 +26,8 @@ import RedditIcon from "./components/icons/RedditIcon.vue";
 import TiktokIcon from "./components/icons/TiktokIcon.vue";
 import VkIcon from "./components/icons/VkIcon.vue";
 import YoutubeIcon from "./components/icons/YoutubeIcon.vue";
+import NobemIcon from "./components/icons/NobemIcon.vue";
+import GithubIcon from "./components/icons/GithubIcon.vue";
 
 function createFyUI() {
   return {
@@ -115,6 +117,8 @@ export {
   TiktokIcon,
   VkIcon,
   YoutubeIcon,
+  NobemIcon,
+  GithubIcon,
 };
 
 export * from "./types";

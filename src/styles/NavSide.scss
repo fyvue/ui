@@ -27,15 +27,23 @@
     }
 
     &.fui-sidebar__md {
-      @apply w-28;
+      @apply w-12;
+      &.fui-sidebar__md {
+        @apply w-12;
+      }
       .fui-sidebar__link {
         @apply flex flex-col text-xs;
         svg {
           @apply mr-0;
         }
         span {
-          @apply text-center;
+          @apply hidden;
         }
+      }
+      .fui-sidebar__link:hover .fui-tooltip,
+      .fui-sidebar__link:focus .fui-tooltip,
+      .fui-sidebar__link:active .fui-tooltip {
+        @apply visible opacity-100 left-11 top-0 bottom-0 flex items-center;
       }
     }
   }
@@ -60,7 +68,7 @@
       .fui-sidebar__link:hover .fui-tooltip,
       .fui-sidebar__link:focus .fui-tooltip,
       .fui-sidebar__link:active .fui-tooltip {
-        @apply visible opacity-100 left-9 top-1;
+        @apply visible opacity-100 left-11 top-0 bottom-0 flex items-center;
       }
     }
   }

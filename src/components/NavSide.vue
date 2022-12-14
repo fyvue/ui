@@ -29,25 +29,34 @@ const isOpen = useStorage(`isOpenSidebar-${props.id}`, true);
 <template>
   <aside class="fui-sidebar" :class="isOpen ? '' : 'fui-sidebar__md'">
     <div class="fui-sidebar__controller">
-      <button class="btn neutral" @click="isOpen = !isOpen">
+      <button
+        class="btn neutral"
+        aria-controls="side-nav"
+        @click="isOpen = !isOpen"
+      >
         <ArrowLeftIcon v-if="isOpen" />
         <ArrowRightIcon v-else />
+        <span class="fui-sr-only">Controls Sidebar Size</span>
       </button>
     </div>
-    <ul role="list">
+    <slot name="before"></slot>
+    <ul role="list" id="side-nav">
       <li v-for="(link, index) of links" :key="`aside_link_${index}`">
         <RouterLink
           :to="link.to"
           class="fui-sidebar__link"
           :class="isLinkActive(link)"
         >
-          <component :is="link.icon" v-if="link.icon" />
-          <span>{{ link.name }}</span>
           <div role="tooltip" class="fui-tooltip">
             {{ link.name }}
           </div>
+          <component :is="link.icon" v-if="link.icon" />
+          <span>{{ link.name }}</span>
+          <span class="fui-sr-only">{{ link.name }}</span>
         </RouterLink>
       </li>
+      <slot name="lis"></slot>
     </ul>
+    <slot name="after"></slot>
   </aside>
 </template>
