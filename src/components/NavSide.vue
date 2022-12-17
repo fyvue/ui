@@ -7,19 +7,21 @@ const props = withDefaults(
   defineProps<{
     links: NavLink[];
     id?: string;
+    baseUrl?: string;
   }>(),
   {
     id: "main",
+    baseUrl: "/",
   }
 );
 const route = useRoute();
 const isLinkActive = (link: NavLink) => {
-  if (link.to != "/") {
+  if (link.to != props.baseUrl) {
     if (route.path == link.to || route.path.includes(link.to))
-      return "router-link-active";
+      return "fvside-active";
   } else {
     if (route.path == link.to) {
-      return "router-link-exact-active";
+      return "fvside-active";
     }
   }
   return "";

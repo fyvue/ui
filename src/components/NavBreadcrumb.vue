@@ -12,7 +12,7 @@ withDefaults(
 </script>
 <template>
   <nav class="fui-breadcrumb" aria-label="Breadcrumb">
-    <ol>
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
       <template v-for="(item, index) in nav" :key="`bc_${index.toString()}`">
         <li
           :class="
@@ -22,16 +22,20 @@ withDefaults(
                 : 'fui-breadcrumb__normal'
               : 'fui-breadcrumb__current'
           "
-          :aria-current="item.to == $route.path ? undefined : 'page'"
+          itemprop="itemListElement"
+          itemtype="https://schema.org/ListItem"
+          itemscope
         >
           <ChevronRightIcon v-if="index != 0" />
 
-          <router-link :to="item.to" v-if="item.to">
+          <router-link :to="item.to" v-if="item.to" itemprop="item">
             <HomeIcon v-if="index === 0" />
-            {{ item.name }}
+            <span itemprop="name">{{ item.name }}</span>
+            <meta itemprop="position" :content="(index + 1).toString()" />
           </router-link>
           <span v-else>
-            {{ item.name }}
+            <span itemprop="name">{{ item.name }}</span>
+            <meta itemprop="position" :content="(index + 1).toString()" />
           </span>
         </li>
       </template>
