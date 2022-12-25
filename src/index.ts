@@ -13,21 +13,23 @@ import DefaultTable from "./components/DefaultTable.vue";
 import DefaultError404 from "./components/DefaultError404.vue";
 import NavSide from "./components/NavSide.vue";
 
-import DiscordIcon from "./components/icons/DiscordIcon.vue";
-import FacebookIcon from "./components/icons/FacebookIcon.vue";
-import InstagramIcon from "./components/icons/InstagramIcon.vue";
-import TelegramIcon from "./components/icons/TelegramIcon.vue";
-import TwitterIcon from "./components/icons/TwitterIcon.vue";
-import CoinMarketCapIcon from "./components/icons/CoinMarketCapIcon.vue";
-import GoogleIcon from "./components/icons/GoogleIcon.vue";
-import LinkedInIcon from "./components/icons/LinkedInIcon.vue";
-import OpenSeaIcon from "./components/icons/OpenSeaIcon.vue";
-import RedditIcon from "./components/icons/RedditIcon.vue";
-import TiktokIcon from "./components/icons/TiktokIcon.vue";
-import VkIcon from "./components/icons/VkIcon.vue";
-import YoutubeIcon from "./components/icons/YoutubeIcon.vue";
-import NobemIcon from "./components/icons/NobemIcon.vue";
-import GithubIcon from "./components/icons/GithubIcon.vue";
+import {
+  DiscordIcon,
+  FacebookIcon,
+  InstagramIcon,
+  TelegramIcon,
+  TwitterIcon,
+  CoinMarketCapIcon,
+  GoogleIcon,
+  LinkedInIcon,
+  OpenSeaIcon,
+  RedditIcon,
+  TiktokIcon,
+  VkIcon,
+  YoutubeIcon,
+  NobemIcon,
+  GithubIcon,
+} from "@fy-/icons";
 
 function createFyUI() {
   return {

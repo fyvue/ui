@@ -6,6 +6,7 @@ export type NavLink = {
   name: string;
   childrens?: NavLink[];
   icon?: Component;
+  id?: string;
 };
 export interface BreadcrumbLink {
   name: string;
