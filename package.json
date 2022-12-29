@@ -1,6 +1,6 @@
 {
     "name": "@fy-/ui",
-    "version": "0.0.32",
+    "version": "0.0.34",
     "author": "Florian 'Fy' Gasquez <m@fy.to>",
     "license": "MIT",
     "repository": {
@@ -29,6 +29,7 @@
     "peerDependencies": {
         "@fy-/core": "^0.0.x",
         "@fy-/head": "^0.0.x",
+        "@fy-/icons": "^0.0.x",
         "@headlessui/vue": "^1.7.x",
         "@vueuse/core": "^9.5.x",
         "vue": "^3.2.x",

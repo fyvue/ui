@@ -114,9 +114,15 @@ defineExpose({ focus, getInputRef });
         ref="inputRef"
         :aria-label="label"
         v-if="
-          ['text', 'password', 'email', 'search', 'date', 'datetime'].includes(
-            type
-          )
+          [
+            'text',
+            'password',
+            'email',
+            'search',
+            'date',
+            'datetime',
+            'url',
+          ].includes(type)
         "
         class="fui-input__input"
         :placeholder="placeholder"
